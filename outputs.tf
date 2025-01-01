@@ -65,15 +65,15 @@ output "ec2_transit_gateway_route_ids" {
   value       = aws_ec2_transit_gateway_route.this[*].id
 }
 
-output "ec2_transit_gateway_route_table_association_ids" {
-  description = "List of EC2 Transit Gateway Route Table Association identifiers"
-  value       = [for k, v in aws_ec2_transit_gateway_route_table_association.this : v.id]
-}
+#output "ec2_transit_gateway_route_table_association_ids" {
+#  description = "List of EC2 Transit Gateway Route Table Association identifiers"
+#  value       = [for k, v in aws_ec2_transit_gateway_route_table_association.this : v.id]
+#}
 
-output "ec2_transit_gateway_route_table_association" {
-  description = "Map of EC2 Transit Gateway Route Table Association attributes"
-  value       = aws_ec2_transit_gateway_route_table_association.this
-}
+#output "ec2_transit_gateway_route_table_association" {
+#  description = "Map of EC2 Transit Gateway Route Table Association attributes"
+#  value       = aws_ec2_transit_gateway_route_table_association.this
+#}
 
 output "ec2_transit_gateway_route_table_propagation_ids" {
   description = "List of EC2 Transit Gateway Route Table Propagation identifiers"
